@@ -5,13 +5,16 @@ image = Image.open("./Lenna.png")
 
 plt.imshow(image)
 plt.show()
-
-image 2 =image.resize((32,32))
-
-plt.imshow(image2)
+# 좌우반전
+image3 =image.transpose(Image.FLIP_LEFT_RIGHT)
+plt.imshow(image3)
 plt.show()
-
-print(image2)
-print((type(image2)))
-print(image2.size)
-print(image.mode)
+# 180도 회전
+image4 = image.transpose(Image.ROTATE_180)
+plt.imshow(image4)
+plt.show()
+# 크기 조정
+width, height = image.size
+image5 = image.resize((width//2,height//2))
+plt.imshow(image5)
+plt.show()
